@@ -1,0 +1,28 @@
+{
+  "name": "@workspace/db",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./schema": "./src/schema.js",
+    "./client": "./src/client.js"
+  },
+  "scripts": {
+    "generate": "drizzle-kit generate --config drizzle.config.cjs",
+    "push": "drizzle-kit push --config drizzle.config.cjs",
+    "migrate": "node src/migrate.js",
+    "migrate:auth": "node scripts/migrate-auth.js",
+    "studio": "drizzle-kit studio --config drizzle.config.cjs"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.38.3",
+    "drizzle-zod": "^0.7.0",
+    "postgres": "^3.4.5",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.30.1"
+  }
+}

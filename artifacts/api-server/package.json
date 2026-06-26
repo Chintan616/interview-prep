@@ -1,0 +1,29 @@
+{
+  "name": "@workspace/api-server",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./src/index.js",
+  "scripts": {
+    "dev": "node --watch --env-file=.env src/index.js",
+    "start": "node --env-file=.env src/index.js"
+  },
+  "dependencies": {
+    "@workspace/db": "workspace:*",
+    "connect-pg-simple": "^10.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "jsonwebtoken": "^9.0.2",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "drizzle-orm": "^0.38.3",
+    "express": "^5.0.1",
+    "express-session": "^1.18.1",
+    "multer": "^1.4.5-lts.1",
+    "openai": "^4.77.3",
+    "pdf-parse": "1.1.1",
+    "pino": "^9.6.0",
+    "pino-http": "^10.3.0",
+    "pino-pretty": "^13.0.0",
+    "zod": "^3.24.1"
+  }
+}
