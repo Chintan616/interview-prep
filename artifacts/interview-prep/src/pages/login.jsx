@@ -24,7 +24,8 @@ export function LoginPage() {
   }, [isAuthenticated]);
 
   const handleGoogleSignIn = () => {
-    window.location.href = "/api/auth/google";
+    const baseUrl = import.meta.env.VITE_API_URL || "";
+    window.location.href = `${baseUrl}/api/auth/google`;
   };
 
   return (
